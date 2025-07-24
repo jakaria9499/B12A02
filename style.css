@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #E95A08;
+    --secondary-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 71rem;
+    margin: 0 auto;
+
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    
+} 
+nav ul {
+    display: flex;
+    gap: 3rem;
+}  
+nav ul li a {
+    color: #21486e;
+    font-weight: 500;
+    font-size: 1rem;
+}
+nav .home{
+    color: #252432;
+    font-weight: bold;
+}
+.shop, .about {
+    color: #8987A1;
+}
+.cart{
+    margin-right: 20px;
+}
+/* main section styleing  start */
+main {
+    max-width: 71rem;
+    margin: 0 auto;
+}
+/* banner section */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 9rem;
+    width: 100%;
+}
+.text-content h1 {
+    font-size: 65px;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: "Noto Serif", serif;
+}
+.primary {
+    color: var(--primary-color);
+}
+.text-content p{
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+
+/* plant section start */
+.plants {
+    max-width: 71rem;
+    margin-top: 150px;
+}
+.plants h1 {
+    margin: 20px 0;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Noto Serif", serif;
+
+}
+.plants p {
+    font-size: 22px;
+    text-align: center;
+}
+.plants .text-div {
+    max-width: 888px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+}
+.plants .plant-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr) ;
+    gap: 15px;
+
+}
+.plant-container h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: center;
+
+}
+.plant-container .title{
+    font-weight: 600;
+    color: #111111;
+}
+.plant-container button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.pant-item img {
+    width: 100%;
+}
+
+
+/* responsive design */
+
+@media only screen and (max-width: 576px) {
+    header nav ul {
+        display: none;
+    }
+    .banner {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .cart{
+        margin-right: 20px;
+    }
+    .banner img {
+        width: 100%;
+    }
+    .text-content h1{
+        font-size: 24px;
+    }
+    .text-content p {
+        font-size: 16px;
+    }
+    .plants .text-div {
+        max-width: 21rem;
+    }
+    .plants h1 {
+        font-size: 24px;
+    }
+    .plants p {
+        font-size: 14px;
+    }
+    .plants .plant-container{
+        grid-template-columns:repeat(2, 1fr) ;
+    }
+    .plant-container h3 {
+        font-size: 16px;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    .banner {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+}
