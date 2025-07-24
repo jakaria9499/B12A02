@@ -14,7 +14,6 @@
 }
 body {
     width: 100%;
-    padding: 20px;
 }
 
 header {
@@ -55,6 +54,7 @@ nav .home{
 main {
     max-width: 71rem;
     margin: 0 auto;
+
 }
 /* banner section */
 
@@ -130,6 +130,110 @@ main {
     width: 100%;
 }
 
+/* plants lover section */
+.plants-lover{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    margin-top: 150px;
+    gap: 3rem;
+
+}
+.plants-lover img{
+    width: 100%;
+}
+.plants-lover ul li{
+    list-style-type: disc;
+    color: var(--secondary-color);
+    font-size: 22px;
+    margin: 20px;
+    margin-left: 40px;
+}
+.plants-lover h2{
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+.plants-lover .image-div{
+    position: relative;
+}
+.plants-lover .badge {
+    position: absolute;
+    width: 50%;
+    right: -15%;
+    top: -20%;
+}
+
+/* latest deals section  */
+
+.latest-deals {
+    max-width: 71rem;
+    margin-top: 150px;
+}
+.latest-deals .title-text h1 {
+    text-align: center;
+    font-family: "Noto Serif", serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+.latest-deals .title-text p{
+    text-align: center;
+    font-size:22px;
+    margin: 20px;
+}
+.latest-deals .title-text .discrip {
+    max-width: 888px;
+    margin: 0 auto;
+}
+.latest-deals .img-div{
+    margin-top: 150px;
+}
+.latest-deals .img-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 2fr);
+    height: 430px;
+    gap: 20px;
+}
+.latest-deals .img-div > div{
+    position: relative;
+}
+.latest-deals .img-div img{
+    border-radius: 15px;
+    filter: brightness(60%);
+    width: 100%;
+}
+.latest-deals .img-div .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.latest-deals .img-div .third-child h3{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    width: 24rem;
+}
+.latest-deals .img-div .first-child h3, .latest-deals .img-div .second-child h3{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 14rem;
+}
+.latest-deals .img-div p{
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+.latest-deals .third-child p{
+    font-weight: 600;
+    color: white;
+    font-size: 28px;
+}
+.latest-deals .img-div .third-child{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
 
 /* responsive design */
 
@@ -154,6 +258,8 @@ main {
     .text-content p {
         font-size: 16px;
     }
+
+
     .plants .text-div {
         max-width: 21rem;
     }
@@ -171,6 +277,33 @@ main {
     }
 
 
+    .plants-lover{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .plants-lover .badge {
+        display: none;
+    }
+    .plants-lover .title {
+        font-size: 24px;
+    }
+    .plants-lover ul li{
+        font-size: 14px;
+    }
+
+
+    .latest-deals .img-div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .latest-deals .img-div .third-child{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    }
+    .latest-deals .third-child p{
+    font-size: 16px;
+    }
+    .latest-deals .img-div .third-child h3{
+    font-size: 20px;
+    }
 }
 
 
