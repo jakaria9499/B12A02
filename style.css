@@ -51,7 +51,10 @@ nav .home{
     margin-right: 20px;
 }
 /* main section styleing  start */
-main {
+main{
+    width: 100%;
+}
+.main-container {
     max-width: 71rem;
     margin: 0 auto;
 
@@ -192,6 +195,7 @@ main {
     grid-template-columns: repeat(1, 1fr 2fr);
     height: 430px;
     gap: 20px;
+    box-sizing: border-box;
 }
 .latest-deals .img-div > div{
     position: relative;
@@ -233,6 +237,61 @@ main {
     grid-column: 2;
     grid-row: 1 / span 2;
 }
+
+
+/* mail section  */
+
+.email-sec{
+    width: 100%;
+    margin-top: 150px;
+    position:relative;
+
+}
+.email-sec .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+.email-sec img{
+    width: 100%;
+}
+.email-sec .input-container h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Noto Serif", serif;
+}
+.input-container .input{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+.input-container .input input{
+    width: calc(100% - 30px);
+    border: none;
+    height: 60px;
+    padding: 0 15px;
+}
+.input-container .input button{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 20%;
+    border: none;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+}
+.input-container .input input:focus{
+    outline: none;
+}
+
+
 
 
 /* responsive design */
@@ -293,6 +352,7 @@ main {
 
     .latest-deals .img-div {
         grid-template-columns: repeat(1, 1fr);
+        height: 100%;
     }
     .latest-deals .img-div .third-child{
     grid-column: 1 / span 1;
@@ -303,6 +363,16 @@ main {
     }
     .latest-deals .img-div .third-child h3{
     font-size: 20px;
+    text-align: center;
+    }
+    .email-sec .input-container h1{
+        font-size: 20px;
+    }
+    .email-sec .input-container {
+        width: 80%;
+    }
+    .input-container .input input , .input-container .input button{
+        height: 40px;
     }
 }
 
@@ -313,5 +383,10 @@ main {
         justify-content: center;
         align-items: flex-end;
     }
-
+    .email-sec .input-container h1{
+        font-size: 31px;
+    }
+        .email-sec .input-container {
+        width: 70%;
+    }
 }
